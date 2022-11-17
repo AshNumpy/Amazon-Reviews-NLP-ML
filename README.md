@@ -1,13 +1,20 @@
 # Amazon Reviews Analysis NLP
 In this project you will see how to do sentiment analysis and how to import that analysis to machine learning algorithms. 
 
-I examine many machine learning algorithms and calculated the accuracy. End of the examine them I choose the Random Forest Classifier.  
+I examine many machine learning algorithms and calculated the accuracy. End of the examine, I choose the Random Forest Classifier.  
 
-I did hyperparameter tunning and searched best hyperparameters. I found the best parameters as below:
+I did hyperparameter tunning and searched best hyperparameters. 
+
+## Read Map
+Go to `../Notebooks/..` path and start with reading the notebooks.  
+1. `../explore.ipynb`: Exploring and understanding the data.  
+1. `../nlp_analysis.ipynb`: Cleaning and analyzing the reviews. Prepare the dataset for machine learning process.  
+1. `../machine_learning.ipynb`: Vectorizing the reviews for machine learning. Using *"Multinomial Naive Bayes"* algorithm and checking errors and accuracies.  
+1. `../ml_boosting_search.ipynb`: Using many machine learning algorithms and searching for the best hyperparameters. Final of the boosting and searching study I decided to algorithm and hyperparameters that is below:
 ```python
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier(n_estimators=x, alpha=x, criterion=x)
-```
+``` 
 
 ## Requirements & Installation
 You can go `../Packages/..` file path and run the `requirements.py` python file for installing and checking the library requirements. If you don't want to do it, you can go below and see the requirements and how to install them.  
