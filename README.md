@@ -10,10 +10,10 @@ Go to `../Notebooks/..` path and start with reading the notebooks.
 1. `../explore.ipynb`: Exploring and understanding the data.  
 1. `../nlp_analysis.ipynb`: Cleaning and analyzing the reviews. Prepare the dataset for machine learning process.  
 1. `../machine_learning.ipynb`: Vectorizing the reviews for machine learning. Using *"Multinomial Naive Bayes"* algorithm and checking errors and accuracies.  
-1. `../ml_boosting_search.ipynb`: Using many machine learning algorithms and searching for the best hyperparameters. Final of the boosting and searching study I decided to algorithm and hyperparameters that is below:
+1. `../Hyperparameter-Tuning/tuning.py`: Using many machine learning algorithms and searching for the best hyperparameters. Final of the boosting and searching study I decided to algorithm and hyperparameters that is below:
 ```python
 from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(n_estimators=x, alpha=x, criterion=x)
+model = RandomForestClassifier(n_estimators=160, max_features='log2', max_depth=4, criterion='gini')
 ``` 
 
 ## Requirements & Installation
