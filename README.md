@@ -13,7 +13,7 @@ Go to `../Notebooks/..` path and start with reading the notebooks.
 1. `../Hyperparameter-Tuning/tuning.py`: Using many machine learning algorithms and searching for the best hyperparameters. Final of the boosting and searching study I decided to algorithm and hyperparameters that is below:
 ```python
 from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(n_estimators=160, max_features='log2', max_depth=4, criterion='gini')
+RandomForestClassifier(n_estimators=160, max_features='log2', max_depth=4, criterion='gini')
 ``` 
 
 ## Requirements & Installation
