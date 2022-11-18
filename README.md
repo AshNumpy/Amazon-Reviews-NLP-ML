@@ -1,8 +1,10 @@
 # Amazon Reviews Analysis NLP
 In this project you will see how to do sentiment analysis and how to import that analysis to machine learning algorithms. 
 
-I examine many machine learning algorithms and calculated the accuracy. End of the examine, I choose the Random Forest Classifier.  
+## Project's Purpose
+Project's purpose is doing sentiment analysis to reviews. Then predicting the that review's rate (how much star given by reviewer out of 5).
 
+I examine many machine learning algorithms and calculated the accuracy. End of the examine, I choose the Random Forest Classifier.  
 I did hyperparameter tunning and searched best hyperparameters. 
 
 ## Read Map
