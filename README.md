@@ -1,4 +1,6 @@
-# Amazon Reviews Analysis NLP
+<h1 align="center">Amazon Reviews Analysis NLP</h1>
+<hr>
+
 In this project you will see how to do sentiment analysis and how to import that analysis to machine learning algorithms. 
 
 ## Project's Purpose
