@@ -1,107 +1,54 @@
-<h1 align="center">Amazon Reviews Analysis NLP</h1>
-<hr>
+<details>
+<summary>Türkçe Açıklama için Tıklayınız</summary>
 
-In this project you will see how to do sentiment analysis and how to import that analysis to machine learning algorithms. 
+## Proje Genel Bakış:
 
-## Project's Purpose
-Project's purpose is doing sentiment analysis to reviews, then predicting that review's rate (how much star given by reviewer out of 5).
+Bu proje, Amazon ürünlerine yapılan yorumları analiz ederek kişilerin duygularını belirlemek ve NLP (Doğal Dil İşleme) yöntemleriyle kullanıcıların vereceği yıldız sayısını tahmin etmeyi amaçlamaktadır. Proje, metin verilerini işleme, metin sınıflandırma ve duygu analizi gibi NLP tekniklerini kullanarak kullanıcıların yorumlarından elde edilen bilgilerle ürünlere verilecek yıldız sayılarını öngörmeyi hedefler.
 
-I examine many machine learning algorithms and calculated the accuracy. End of the examine, I choose the Random Forest Classifier.  
-I did hyperparameter tunning and searched best hyperparameters. 
+## Proje Hedefleri:
 
-## Read Map
-Go to `../Notebooks/..` path and start with reading the notebooks.  
-1. `../explore.ipynb`: Exploring and understanding the data.  
-1. `../nlp_analysis.ipynb`: Cleaning and analyzing the reviews. Prepare the dataset for machine learning process.  
-1. `../machine_learning.ipynb`: Vectorizing the reviews for machine learning. Using *"Multinomial Naive Bayes"* algorithm and checking errors and accuracies.  
-1. `../Hyperparameter-Tuning/tuning.py`: Using many machine learning algorithms and searching for the best hyperparameters. Final of the boosting and searching study I decided to algorithm and hyperparameters that is below:
-```python
-from sklearn.ensemble import RandomForestClassifier
-RandomForestClassifier(n_estimators=160, max_features='log2', max_depth=4, criterion='gini')
-``` 
+- Veri Toplama: Amazon ürünlerine yapılan yorumları toplayarak bir veri seti oluşturmak.
 
-## Requirements & Installation
-You can go `../Packages/..` file path and run the `requirements.py` python file for installing and checking the library requirements. If you don't want to do it, you can go below and see the requirements and how to install them.  
+- Metin İşleme: Metin verilerini ön işleme adımlarını uygulayarak temizlemek, düzenlemek ve anlamlı hale getirmek.
 
-<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01Ctpf3nRjz7b9l-om2h2llNA0jL4d_MVtXXXHVF5mWIn5nyMXLgzYscFGZdbhf_LN8M&usqp=CAU' width='100' height='100'> <img src='https://raw.githubusercontent.com/AshNumpy/Amazon-Reviews-Sentiment-Analysis-ML-Project/main/Images/Others/numpy.png' width='100' height='100'> <img src='https://raw.githubusercontent.com/AshNumpy/Amazon-Reviews-Sentiment-Analysis-ML-Project/main/Images/Others/matplotlib.png' width='100' height='100'> <img src='https://raw.githubusercontent.com/AshNumpy/Amazon-Reviews-Sentiment-Analysis-ML-Project/main/Images/Others/plotly.png' width='308' height='100'> <img src='https://raw.githubusercontent.com/AshNumpy/Amazon-Reviews-Sentiment-Analysis-ML-Project/main/Images/Others/nltk.png' width='100' height='100'> <img src='https://raw.githubusercontent.com/AshNumpy/Amazon-Reviews-Sentiment-Analysis-ML-Project/main/Images/Others/scikit-learn.png' width='180' height='100'>
+- Duygu Analizi: Metin sınıflandırma yöntemleri kullanarak kullanıcı yorumlarının duygusunu (olumlu, olumsuz veya nötr) belirlemek.
 
-1. Pandas  
-```bash
-pip install pandas 
+- Yıldız Tahmini: Kullanıcı yorumlarının duygusunu ve içeriğini kullanarak ürünlere verilecek yıldız sayısını tahmin etmek.
 
-Version: 1.4.3
-Summary: Powerful data structures for data analysis, time series, and statistics
-Home-page: https://pandas.pydata.org
-```
+## Proje Özellikleri:
 
-1. Numpy  
-```bash
-pip install numpy 
+- Veri Toplama: Amazon'un API'sini veya web scraping tekniklerini kullanarak ürün yorumlarını toplayarak bir veri seti oluşturmak.
 
-Version: 1.23.0
-Summary: NumPy is the fundamental package for array computing with Python.
-Home-page: https://www.numpy.org
-```
+- Metin İşleme: Metin verilerini tokenize etmek, stop-words'leri kaldırmak ve lemmatization gibi metin ön işleme adımlarını uygulamak.
 
-1. Matplotlib  
-```bash
-pip install matplotlib 
+- Duygu Analizi: Metin sınıflandırma algoritmalarını (örneğin, Naive Bayes, SVM, vs.) kullanarak yorumları olumlu, olumsuz veya nötr olarak sınıflandırmak.
 
-Version: 3.5.2
-Summary: Python plotting package
-Home-page: https://matplotlib.org
-```
+- Yıldız Tahmini: Kullanıcı yorumlarının içeriği ve sınıflandırılmış duygularını kullanarak ürünlere verilecek yıldız sayısını regresyon veya sınıflandırma algoritmalarıyla tahmin etmek.
 
-1. Squarify  
-```bash
-pip install squarify 
+</details>
 
-Version: 0.4.3
-Summary: Pure Python implementation of the squarify treemap layout algorithm
-Home-page: https://github.com/laserson/squarify
-```
+## Project Overview:
 
-1. Plotly  
-```bash
-pip install plotly 
+This project aims to analyze Amazon product reviews to determine users' sentiments and predict the star ratings (on a scale of 1 to 5) that users would give using Natural Language Processing (NLP) techniques. The project involves using NLP methods such as text processing, text classification, and sentiment analysis to predict the star ratings based on users' reviews.
 
-Version: 5.9.0
-Summary: An open-source, interactive data visualization library for Python
-Home-page: https://plotly.com/python/
-```
+## Project Objectives:
 
-1. Wordcloud  
-```bash
-pip install wordcloud 
+- Data Collection: Collect Amazon product reviews to create a dataset.
 
-Version: 1.8.2.2
-Summary: A little word cloud generator
-Home-page: https://github.com/amueller/word_cloud
-```
+- Text Processing: Preprocess text data by cleaning, formatting, and making it meaningful.
 
-1. Nltk  
-```bash
-pip install nltk 
+- Sentiment Analysis: Determine the sentiment of user reviews (positive, negative, or neutral) using text classification methods.
 
-Version: 3.7
-Summary: Natural Language Toolkit
-Home-page: https://www.nltk.org/
-```
+- Star Rating Prediction: Predict the star ratings given to products by users based on the sentiment and content of their reviews.
 
-1. Vader Sentiment  
-```bash
-pip install vaderSentiment 
+## Project Features:
 
-Version: 3.3.2
-Summary: VADER Sentiment Analysis. VADER (Valence Aware Dictionary and sEntiment Reasoner) is a lexicon and rule-based sentiment analysis tool that is specifically attuned to sentiments expressed in social media, and works well on texts from other domains.
-Home-page: https://github.com/cjhutto/vaderSentiment
-```
+- Data Collection: Gather product reviews from Amazon using their API or web scraping techniques to create a dataset.
 
-1. Scikit-Learn
-```bash
-pip install sklearn
+- Text Processing: Tokenize text data, remove stop words, and apply text preprocessing steps like lemmatization.
 
-Version: 0.0
-Summary: A set of python modules for machine learning and data mining
-Home-page: https://pypi.python.org/pypi/scikit-learn/
-```
+- Sentiment Analysis: Use text classification algorithms (e.g., Naive Bayes, SVM, etc.) to classify reviews as positive, negative, or neutral.
+
+- Star Rating Prediction: Predict star ratings for products using regression or classification algorithms based on the content and classified sentiments of user reviews.
+
+</details>
